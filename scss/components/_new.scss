@@ -1,0 +1,39 @@
+@use '../util/' as u;
+
+.new {
+    background-color: var(--c-blue);
+    padding: u.rem(24) u.rem(20);
+
+    @media(width >= u.em(1110)) {
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;
+    }
+
+    &__title {
+        color: var(--c-yellow);
+        font-size: var(--f-l);
+    }
+    &__post {
+        padding-block: u.rem(30);
+        border-block-end: 1px solid var(--c-gray);
+
+        &:last-child {
+            border: none;
+        }
+    }
+    &__headline {
+        display: inline-block;
+        color: var(--c-white);
+        font-size: u.rem(20);
+        font-weight: 800;
+        margin-block-end: u.rem(8);
+
+        &:hover {
+            color: var(--c-yellow);
+        }
+    }
+    &__description {
+        font-size: var(--f-body);
+        color: var(--c-silver);
+    }
+}
